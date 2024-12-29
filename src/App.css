@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #444;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #6b705c;
+  color: white;
+  padding: 20px 60px;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-variant: small-caps;
+  font-size: 30px;
+  font-family: 'Roboto', cursive;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+.header {
+  background-image: url('https://tinyurl.com/cafe-banner');
+  background-size: cover;
+  height: 90vh;
+  color: #f0efeb;
+  font-variant: small-caps;
+  padding: 2rem;
+  width: 100%;
+  font-family: 'Lobster', cursive;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.header h1,
+.header p {
+  position: relative;
+  z-index: 2;
+}
+
+.header h1 {
+  font-size: 50px;
+  margin: 0;
+  text-align: right;
+  width: 80%;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.header p {
+  text-align: right;
+  width: 75%;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.menu {
+  padding: 2rem 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.menu h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #6b705c;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  background: #ffe8d6;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 30vh;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about {
+  background: #f0efeb;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.about h2 {
+  color: #6b705c;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.about p {
+  word-break: keep-all;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact {
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #6b705c;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background: #6b705c;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #556b6f;
+}
+
+.footer {
+  background: #6b705c;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .nav-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .navbar h1 {
+    font-size: 20px;
+  }
+  .navbar a {
+    font-size: 12px;
+  }
+  .header {
+    height: 70vh;
+  }
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .menu-item {
+    width: 100%;
+  }
+
+  .menu-item img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+
+  .contact-form button {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
